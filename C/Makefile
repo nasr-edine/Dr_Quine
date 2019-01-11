@@ -20,4 +20,4 @@ fclean: clean
 	rm -rf Grace
 	rm -rf tmp_Colleen
 	rm -rf Grace_kid.c
-	rm -rf C/folder/Sully*
+	rm -rf folder/Sully*
