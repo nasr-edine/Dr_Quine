@@ -1,40 +1,16 @@
-/* comment 2 */
 #include <stdio.h>
-#include <fcntl.h>
-#include <unistd.h> 
-#include <stdlib.h>
 
-void read_file()
+void function(){}
+/*
+   comment
+*/
+int main (void)
 {
-    int fd;
-    int ret;
-    char data[1024];
-
-    /* fd = open("C/Colleen.c", O_RDONLY);*/
-    fd = open("Colleen.c", O_RDONLY);
-    if (fd == -1)
-    {
-        perror("Error while opening the file.\n");
-        exit(0);
-    }
-    while ((ret = read(fd, data, sizeof(data)-1)) > 0) 
-    {
-        data[ret] = 0x00;
-    }
-    printf("%s", data);
-    ret = close(fd);
-
-    if (ret == -1)
-    {
-        perror("Error while closing the file.\n");
-        exit(0);
-    }
-
-}
-
-int main()
-{
-    /* comment 1 */
-    read_file();
-    return 0;
+/*
+   comment
+*/
+char str[]= "#include <stdio.h>%c%cvoid function(){}%c/*%c   comment%c*/%cint main (void)%c{%c/*%c   comment%c*/%cchar str[]= %c%s%c;%cprintf(str, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x22, str, 0x22, 0x0A, 0x0A, 0x0A, 0x0A);%cfunction();%creturn 0;%c}";
+printf(str, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x0A, 0x22, str, 0x22, 0x0A, 0x0A, 0x0A, 0x0A);
+function();
+return 0;
 }
