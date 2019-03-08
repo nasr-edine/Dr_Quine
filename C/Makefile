@@ -1,10 +1,10 @@
 CC=clang
 CFLAGS=-Wall -Wextra -Werror
-EXEC=Colleen
-SRC= Colleen.c
+NAME=Colleen Grace Sully
+SRC= Colleen.c Grace.c Sully.c
 OBJ= $(SRC:.c=.o)
 
-all: Colleen Grace Sully
+all: $(NAME)
 
 Colleen: Colleen.c
 	clang $(CFLAGS) -o Colleen Colleen.c
@@ -16,12 +16,14 @@ Sully: Sully.c
 	clang $(CFLAGS) -o Sully Sully.c
 
 clean:
-	rm -rf *.o
+	rm -f $(OBJ)
 
 fclean: clean
-	rm -rf Colleen
-	rm -rf Grace
-	rm -rf tmp_Colleen
-	rm -rf Grace_kid.c
-	rm -rf Sully
+	rm -f $(NAME)
+	rm -f tmp_Colleen
+	rm -f Grace_kid.c
 	rm -rf tmp/Sully*
+
+re: fclean all
+
+.PHONY: all clean fclean re
