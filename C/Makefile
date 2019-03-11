@@ -22,7 +22,7 @@ fclean: clean
 	rm -f $(NAME)
 	rm -f tmp_Colleen
 	rm -f Grace_kid.c
-	rm -rf tmp/Sully*
+	rm -rf tmp
 
 re: fclean all
 
