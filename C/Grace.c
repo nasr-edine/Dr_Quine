@@ -2,6 +2,7 @@
 #define A 1
 #define B 2
 #define QUINE(x)int main(){ char*s=#x;x}
+
 /*
    comment
 */
