@@ -5,4 +5,4 @@
 /*
    comment
 */
-QUINE(FILE * fp;fp = fopen ("Grace_kid.c", "w+");fprintf(fp, "#include <stdio.h>\n#define A 1\n#define B 2\n#define QUINE(x)int main(){ char*s=#x;x}\n/*\n   comment\n*/\nQUINE(%s)",s);fclose(fp);)
+QUINE(FILE * fp;fp = fopen ("Grace_kid.c", "w");if(fp==NULL)return(0);fprintf(fp, "#include <stdio.h>\n#define A 1\n#define B 2\n#define QUINE(x)int main(){ char*s=#x;x}\n/*\n   comment\n*/\nQUINE(%s)",s);fclose(fp);)
